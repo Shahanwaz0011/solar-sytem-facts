@@ -7,7 +7,7 @@ A visually engaging website that combines planetary animations with fascinating 
 ---
 
 ## 🖥️ **Live Demo**
-Check out the live version [here](#).
+Check out the live version [https://shahanwaz0011.github.io/solar-sytem-facts/](#).
 
 ---
 
