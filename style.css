@@ -1,18 +1,226 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black; /* Backup background */
+    color: rgb(235, 15, 15);
+}
+
+header {
+    background-color: #111;
+    padding: 10px 0;
     text-align: center;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.planet-buttons {
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.planet-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #004e92;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.planet-button:hover {
+    background-color: #00d4ff;
+}
+
+.facts-display {
+    text-align: center;
     margin-top: 20px;
 }
 
-#factDisplay {
-    margin-top: 20px;
+#planet-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#fact-text {
+    font-size: 18px;
     font-style: italic;
+}
+
+/* Solar System Background */
+.solar-system {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: black;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, yellow, orange);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px 10px rgba(255, 204, 0, 0.8);
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+.mercury-orbit {
+    width: 100px;
+    height: 100px;
+    animation-duration: 8s;
+}
+
+.venus-orbit {
+    width: 150px;
+    height: 150px;
+    animation-duration: 12s;
+}
+
+.earth-orbit {
+    width: 200px;
+    height: 200px;
+    animation-duration: 16s;
+}
+
+.mars-orbit {
+    width: 250px;
+    height: 250px;
+    animation-duration: 20s;
+}
+
+.jupiter-orbit {
+    width: 300px;
+    height: 300px;
+    animation-duration: 24s;
+}
+
+.saturn-orbit {
+    width: 350px;
+    height: 350px;
+    animation-duration: 28s;
+}
+
+.uranus-orbit {
+    width: 400px;
+    height: 400px;
+    animation-duration: 32s;
+}
+
+.neptune-orbit {
+    width: 450px;
+    height: 450px;
+    animation-duration: 36s;
+}
+
+.planet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, white, lightgray);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateSelf 4s linear infinite;
+}
+
+.mercury {
+    background: radial-gradient(circle, gray, darkgray);
+    width: 8px;
+    height: 8px;
+}
+
+.venus {
+    background: radial-gradient(circle, yellow, gold);
+    width: 12px;
+    height: 12px;
+}
+
+.earth {
+    background: radial-gradient(circle, blue, green);
+    width: 14px;
+    height: 14px;
+}
+
+.mars {
+    background: radial-gradient(circle, red, darkred);
+    width: 10px;
+    height: 10px;
+}
+
+.jupiter {
+    background: radial-gradient(circle, orange, brown);
+    width: 24px;
+    height: 24px;
+}
+
+.saturn {
+    background: radial-gradient(circle, goldenrod, darkgoldenrod);
+    width: 22px;
+    height: 22px;
+}
+
+.uranus {
+    background: radial-gradient(circle, lightblue, blue);
+    width: 20px;
+    height: 20px;
+}
+
+.neptune {
+    background: radial-gradient(circle, royalblue, darkblue);
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateSelf {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
