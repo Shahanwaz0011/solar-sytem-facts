@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Fun Facts</title>
+    <title>Solar System Planet Facts</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Planet Fun Facts</h1>
-        <div id="factDisplay"></div>
-        <div class="planet-buttons">
-            <button onclick="showPlanetFact('mercury')">Mercury</button>
-            <button onclick="showPlanetFact('venus')">Venus</button>
-            <button onclick="showPlanetFact('earth')">Earth</button>
-            <button onclick="showPlanetFact('mars')">Mars</button>
-            <button onclick="showPlanetFact('jupiter')">Jupiter</button>
-            <button onclick="showPlanetFact('saturn')">Saturn</button>
-            <button onclick="showPlanetFact('uranus')">Uranus</button>
-            <button onclick="showPlanetFact('neptune')">Neptune</button>
-        </div>
+    <!-- Animated Solar System Background -->
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="orbit mercury-orbit"><div class="planet mercury"></div></div>
+        <div class="orbit venus-orbit"><div class="planet venus"></div></div>
+        <div class="orbit earth-orbit"><div class="planet earth"></div></div>
+        <div class="orbit mars-orbit"><div class="planet mars"></div></div>
+        <div class="orbit jupiter-orbit"><div class="planet jupiter"></div></div>
+        <div class="orbit saturn-orbit"><div class="planet saturn"></div></div>
+        <div class="orbit uranus-orbit"><div class="planet uranus"></div></div>
+        <div class="orbit neptune-orbit"><div class="planet neptune"></div></div>
     </div>
+
+    <header>
+        <nav>
+            <ul id="navbar">
+             <p>SOLAR SYSTEM PLANET FACTS</p>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="button-container">
+            <button class="planet-button" onclick="showFacts('Mercury')">Mercury</button>
+            <button class="planet-button" onclick="showFacts('Venus')">Venus</button>
+            <button class="planet-button" onclick="showFacts('Earth')">Earth</button>
+            <button class="planet-button" onclick="showFacts('Mars')">Mars</button>
+            <button class="planet-button" onclick="showFacts('Jupiter')">Jupiter</button>
+            <button class="planet-button" onclick="showFacts('Saturn')">Saturn</button>
+            <button class="planet-button" onclick="showFacts('Uranus')">Uranus</button>
+            <button class="planet-button" onclick="showFacts('Neptune')">Neptune</button>
+        </section>
+        <section class="facts-display">
+            <h2 id="planet-name">Select a Planet</h2>
+            <p id="fact-text">Planet facts will appear here!</p>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
